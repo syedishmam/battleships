@@ -1,5 +1,3 @@
-//AIzaSyAKht5SI8YDu-uDjfz24okm7Y8rcLc3yes
-
 import React from 'react';
 
 class GoogleAuth extends React.Component {
@@ -12,6 +10,12 @@ class GoogleAuth extends React.Component {
                 this.auth = window.gapi.auth2.getAuthInstance();
             });
         });
+    }
+
+    onAuthChange = (isSignedIn) => {
+        if(isSignedIn) {
+            
+        }
     }
 
     render() {
