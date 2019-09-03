@@ -10,3 +10,10 @@ export const signOut = () => {
         type: 'SIGN_OUT'
     }
 }
+
+export const shootTile = ({x,y}) => {
+  return {
+    type: 'SHOOT_TILE',
+    payload: {x,y}
+  }
+}

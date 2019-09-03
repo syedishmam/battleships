@@ -2,3 +2,11 @@
   flex:1;
   border:1px solid black;
 }
+
+.tile-hit{
+  background-color:red;
+}
+
+.tile-miss{
+  background-color:gray;
+}
