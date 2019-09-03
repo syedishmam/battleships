@@ -1,0 +1,18 @@
+.grid{
+  height: 300px;
+  width: 300px;
+
+  display:flex;
+  flex-direction: column;
+}
+.grid-title{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-row{
+  display:flex;
+  flex-direction: row;
+  flex:1;
+}

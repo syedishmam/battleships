@@ -1,26 +1,15 @@
 import React from 'react'
+import '../styles/tile.css'
 
 class Tile extends React.Component{
 
 
   render(){
-    <div className="grid">
-      <div className="row">
-
+    return(
+      <div className="tile">
+       
       </div>
-      <div className="row">
-
-      </div>
-      <div className="row">
-
-      </div>
-      <div className="row">
-
-      </div>
-      <div className="row">
-
-      </div>
-    </div>
+    )
   }
 }
 
