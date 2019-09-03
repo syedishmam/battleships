@@ -10,12 +10,10 @@ function App() {
   return (
     <Router history={history}>
       <Route path="/login" component={GoogleAuth}/>
-      <div className="App">
         <div className="grid-container">
-          <Grid title="Opponent" />
-          <Grid title="You" />
+          <Route path="/game" component={() => <Grid title="Opponent" />} />
+          <Route path="/game" component={() => <Grid title="You" />} />
         </div>
-      </div>
     </Router>
   );
 }
