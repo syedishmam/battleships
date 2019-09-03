@@ -1,17 +1,20 @@
 import React from 'react';
+import {Router, Route} from 'react-router-dom';
+
 import GoogleAuth from './GoogleAuth';
 import Grid from './Grid';
+import history from '../history'
 import '../styles/app.css'
 
 function App() {
   return (
-    <div className="App">
-      <GoogleAuth />
-      <div className="grid-container">
-        <Grid title="Opponent" />
-        <Grid title="You" />
-      </div>
-    </div>
+    <Router history={history}>
+      <Route path="/login" component={GoogleAuth}/>
+        <div className="grid-container">
+          <Route path="/game" component={() => <Grid title="Opponent" />} />
+          <Route path="/game" component={() => <Grid title="You" />} />
+        </div>
+    </Router>
   );
 }
 
