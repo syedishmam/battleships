@@ -1,5 +1,9 @@
 import {combineReducers} from 'redux';
 
+import signInAndOutReducer from './signInAndOutReducer';
+import playersReducer from './playersReducer';
+
 export default combineReducers({
-    replaceMe: 'replaceMe'
+    players: playersReducer,
+    user: signInAndOutReducer
 });
