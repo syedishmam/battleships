@@ -4,8 +4,22 @@ class Tile extends React.Component{
 
 
   render(){
-    <div>
-      tile
+    <div className="grid">
+      <div className="row">
+
+      </div>
+      <div className="row">
+
+      </div>
+      <div className="row">
+
+      </div>
+      <div className="row">
+
+      </div>
+      <div className="row">
+
+      </div>
     </div>
   }
 }
