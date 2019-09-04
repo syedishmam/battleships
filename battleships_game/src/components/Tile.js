@@ -8,7 +8,7 @@ class Tile extends React.Component{
 
   render(){
     return(
-      <div className="tile" onClick={this.props.shootTile}>
+      <div className="tile" onClick={ () => this.props.shootTile(1,2)}>
        
       </div>
     )

@@ -11,8 +11,7 @@ export const signOut = () => {
   }
 }
 
-export const shootTile = ({x,y}) => {
-  console.log('shoot action')
+export const shootTile = (x,y) => {
   return {
     type: 'SHOOT_TILE',
     payload: {x,y}

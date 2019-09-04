@@ -1,10 +1,11 @@
-export default (state={test:1},action) => {
-  switch(action){
+export default (state={},action) => {
+  switch(action.type){
     case 'SHOOT_TILE':
-      console.log('gotee')
-      return state
+      console.log(action.payload)
+      return {
+        cors: action.payload
+      }
     default:
-      console.log('shoot reducer')
       return state
   }
 }
