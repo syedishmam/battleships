@@ -2,6 +2,7 @@ export default (state = [
     {
       username:'p_one',
       previous_moves: {},
+      tilesShot:{},
       ships:[
         {
           name:'carrier_one',
@@ -20,6 +21,7 @@ export default (state = [
     {
       username:'p_two',
       previous_moves: {},
+      tilesShot:{},
       ships:[
         {
           name:'carrier_two',

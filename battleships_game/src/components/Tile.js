@@ -9,13 +9,13 @@ class Tile extends React.Component{
   render(){
 
     // CONDITIONAL RENDER OF TILE BASED ON GRID TYPE //
-    var output = null
+    var tile = null
 
     this.props.type === 'Opponent' ? 
-    (output = <div className="tile" onClick={() => this.props.shootTile(1,2)}></div>):
-    (output = <div className="tile"></div>)
-    
-    return output
+    (tile = <div className="tile" onClick={() => this.props.shootTile(1,2)}></div>):
+    (tile = <div className="tile"></div>)
+
+    return tile
   }
 }
 

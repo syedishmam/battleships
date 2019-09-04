@@ -2,17 +2,7 @@
   height: 300px;
   width: 300px;
 
-  display:flex;
-  flex-direction: column;
-}
-.grid-title{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.grid-row{
-  display:flex;
-  flex-direction: row;
-  flex:1;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
