@@ -2,8 +2,10 @@ import {combineReducers} from 'redux';
 
 import signInAndOutReducer from './signInAndOutReducer';
 import playersReducer from './playersReducer';
+import shootTileReducer from './shootTileReducer';
 
 export default combineReducers({
     players: playersReducer,
-    user: signInAndOutReducer
+    user: signInAndOutReducer,
+    shootTile: shootTileReducer
 });

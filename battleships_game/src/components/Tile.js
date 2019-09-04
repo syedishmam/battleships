@@ -1,19 +1,22 @@
 import React from 'react'
 import '../styles/tile.css'
+import {shootTile} from '../actions/index';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
 class Tile extends React.Component{
 
-  onClick = () =>{
-    
-  }
-
   render(){
     return(
-      <div className="tile" onClick={this.onClick}>
+      <div className="tile" onClick={this.props.shootTile}>
        
       </div>
     )
   }
 }
 
-export default Tile;
+function matchDispatchToProps(dispatch){
+  return bindActionCreators({shootTile: shootTile}, dispatch)
+}
+
+export default connect(null,matchDispatchToProps)(Tile);
