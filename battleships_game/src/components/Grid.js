@@ -5,7 +5,7 @@ import '../styles/grid.css';
 class Grid extends React.Component{ 
 
   gridRow(){
-    /* CONDITIONAL RETURN OF GRID ROW BASED ON GRID TYPE */
+    // CONDITIONAL RETURN OF GRID ROW BASED ON GRID TYPE //
     var output = null
     this.props.type === 'Opponent' ? 
       (
