@@ -11,8 +11,8 @@ function App() {
     <Router history={history}>
       <Route path="/login" component={GoogleAuth}/>
         <div className="grid-container">
-          <Route path="/game" component={() => <Grid title="Opponent" />} />
-          <Route path="/game" component={() => <Grid title="You" />} />
+          <Route path="/game" component={() => <Grid type="Opponent"/>} />
+          <Route path="/game" component={() => <Grid type="You" />} />
         </div>
     </Router>
   );
