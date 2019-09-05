@@ -10,7 +10,6 @@ class LoginPage extends React.Component {
                 <h1 className="display-1 title text-center">Battleships</h1>
                 <div className="text-center">
                     <GoogleAuth />
-                    <button className="btn btn-info guestButtonWidth">Continue as Guest</button>
                 </div>
             </div>
         )
