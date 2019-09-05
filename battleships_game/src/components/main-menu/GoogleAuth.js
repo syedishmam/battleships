@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
 
-import {signIn, signOut} from '../../actions';
+import {signIn, signOut, continueAsGuest} from '../../actions';
 import './LoginStyles.css'
 
 class GoogleAuth extends React.Component {
@@ -17,6 +17,10 @@ class GoogleAuth extends React.Component {
                 this.auth.isSignedIn.listen(this.onAuthChange);
             });
         });
+    }
+
+    onContinueAsGuestClick() {
+
     }
 
     onAuthChange = (isSignedIn) => {
@@ -70,4 +74,4 @@ const mapStateToProps = (state) => {
     return {isSignedIn: state.user.isSignedIn}
 }
 
-export default connect(mapStateToProps, {signIn, signOut})(GoogleAuth);
+export default connect(mapStateToProps, {signIn, signOut, continueAsGuest})(GoogleAuth);
