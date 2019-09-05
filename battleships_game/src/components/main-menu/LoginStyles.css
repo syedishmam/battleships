@@ -1,0 +1,16 @@
+.title {
+    margin: 150px 0px 150px 0px;
+}
+
+.guestButtonWidth {
+    width: 120px;
+    font-size: 75%;
+    margin-top: 5px;
+}
+
+.googleIcon {
+    height: 20%;
+    width: 20%;
+    margin-right: 5px;
+    margin-left: 0px;
+}
