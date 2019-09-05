@@ -7,7 +7,7 @@ import './LoginStyles.css'
 
 class Menu extends React.Component {
     renderMenuOptions() {
-        if(this.props.isSignedIn) {
+        if(this.props.isSignedIn || this.props.isGuest) {
             return (
                 <MenuOptions />
             )
@@ -28,7 +28,10 @@ class Menu extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {isSignedIn: state.user.isSignedIn}
+    return {
+        isSignedIn: state.user.isSignedIn,
+        isGuest: state.isGuest.value
+    }
 }
 
 export default connect(mapStateToProps)(Menu);
