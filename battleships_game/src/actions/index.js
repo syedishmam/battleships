@@ -1,3 +1,7 @@
+export const continueAsGuest = () => {
+  
+}
+
 export const signIn = (userId) => (dispatch) => {
   dispatch({type: 'SIGN_IN', payload: userId});
 }
