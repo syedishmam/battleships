@@ -1,11 +1,13 @@
 import React from 'react';
+
 import GoogleAuth from './GoogleAuth';
+import './LoginStyles.css'
 
 class LoginPage extends React.Component {
     render() {
         return (
-            <div className="">
-                <h1>Battleships</h1>
+            <div className="mx-3">
+                <h1 className="display-1 title text-center">Battleships</h1>
                 <div>
                     <GoogleAuth />
                     <button>Sign In As Guest</button>

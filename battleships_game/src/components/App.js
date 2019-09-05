@@ -10,10 +10,10 @@ function App() {
   return (
     <Router history={history}>
       <Route path="/login" component={LoginPage}/>
-        <div className="grid-container">
+      <div className="grid-container">
           <Route path="/game" component={() => <Grid type="Opponent"/>} />
           <Route path="/game" component={() => <Grid type="You" />} />
-        </div>
+      </div>
     </Router>
   );
 }
