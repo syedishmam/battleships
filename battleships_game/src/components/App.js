@@ -1,7 +1,7 @@
 import React from 'react';
 import {Router, Route} from 'react-router-dom';
 
-import GoogleAuth from './GoogleAuth';
+import GoogleAuth from './login-page/GoogleAuth';
 import Grid from './Grid';
 import history from '../history'
 import '../styles/app.css'
