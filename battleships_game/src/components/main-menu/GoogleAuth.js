@@ -18,7 +18,7 @@ class GoogleAuth extends React.Component {
         });
     }
 
-    onContinueAsGuestClick() {
+    onContinueAsGuestClick = () => {
         this.props.continueAsGuest(true);
     }
 
