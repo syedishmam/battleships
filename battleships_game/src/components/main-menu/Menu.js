@@ -6,6 +6,7 @@ import MenuOptions from './MenuOptions';
 import './LoginStyles.css'
 
 class Menu extends React.Component {
+    //Display menu options if user is guest or is signed in
     renderMenuOptions() {
         if(this.props.isSignedIn || this.props.isGuest) {
             return (
