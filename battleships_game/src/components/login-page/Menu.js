@@ -4,7 +4,9 @@ import {connect} from 'react-redux';
 import GoogleAuth from './GoogleAuth';
 import './LoginStyles.css'
 
-class LoginPage extends React.Component {
+class Menu extends React.Component {
+
+
     render() {
         return (
             <div className="mx-3">
@@ -21,4 +23,4 @@ const mapStateToProps = (state) => {
     return {isSignedIn: state.user.isSignedIn}
 }
 
-export default connect(mapStateToProps)(LoginPage);
+export default connect(mapStateToProps)(Menu);
