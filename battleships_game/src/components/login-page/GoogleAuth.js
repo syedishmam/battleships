@@ -51,7 +51,7 @@ class GoogleAuth extends React.Component {
                         <img className="googleIcon" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"/>
                         Sign in With Google
                     </button> <br />
-                    <button className="btn btn-info guestButtonWidth">Continue as Guest</button>
+                    <Link to={`/menu`} className="btn btn-info guestButtonWidth">Continue as Guest</Link>
                 </div>
             )
         }
