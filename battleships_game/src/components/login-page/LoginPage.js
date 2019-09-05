@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import GoogleAuth from './GoogleAuth';
 import './LoginStyles.css'
@@ -16,4 +17,8 @@ class LoginPage extends React.Component {
     }
 }
 
-export default LoginPage;
+const mapStateToProps = (state) => {
+    return {isSignedIn: state.user.isSignedIn}
+}
+
+export default connect(mapStateToProps)(LoginPage);
