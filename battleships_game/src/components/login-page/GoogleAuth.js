@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom'
 
 import {signIn, signOut} from '../../actions';
 import './LoginStyles.css'
@@ -39,13 +40,12 @@ class GoogleAuth extends React.Component {
             return null
         } else if(this.props.isSignedIn) {
             return (
-                <button onClick={this.onSignOutClick} className="btn btn-danger buttonWidth">
-                    Sign Out
-                </button>
+                <Link />
             )
         } else {
             return (
-                <button onClick={this.onSignInClick} className="btn btn-danger" buttonWidth>
+                <button onClick={this.onSignInClick} className="btn btn-danger">
+                    <img className="googleIcon" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"/>
                     Sign in With Google
                 </button>
             )
@@ -66,3 +66,7 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {signIn, signOut})(GoogleAuth);
+
+/*<button onClick={this.onSignOutClick} className="btn btn-danger">
+      Sign Out
+  </button> */
