@@ -8,7 +8,7 @@ class LoginPage extends React.Component {
         return (
             <div className="mx-3">
                 <h1 className="display-1 title text-center">Battleships</h1>
-                <div>
+                <div className="text-center">
                     <GoogleAuth />
                     <button>Sign In As Guest</button>
                 </div>
