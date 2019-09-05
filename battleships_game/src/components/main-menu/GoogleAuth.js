@@ -19,12 +19,13 @@ class GoogleAuth extends React.Component {
     }
 
     onContinueAsGuestClick() {
-        this.props.continueAsGuest();
+        this.props.continueAsGuest(true);
     }
 
     onAuthChange = (isSignedIn) => {
         if(isSignedIn) {
             this.props.signIn(this.auth.currentUser.get().getId());
+            this.props.continueAsGuest(false);
         } else {
             this.props.signOut();
         }
@@ -54,7 +55,7 @@ class GoogleAuth extends React.Component {
                         <img className="googleIcon" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"/>
                         Sign in With Google
                     </button> <br />
-                    <button className="btn btn-info guestButtonWidth">Continue as Guest</button>
+                    <button onClick={this.onContinueAsGuestClick} className="btn btn-info guestButtonWidth">Continue as Guest</button>
                 </div>
             )
         }
