@@ -18,6 +18,10 @@ class GoogleAuth extends React.Component {
         });
     }
 
+    /* 
+        If user is guest, only display Sign In button
+        If user is not guest and has not signed in, display Sign In and Continue as Guest
+    */
     displayUserLogInOptions() {
         if(this.props.isGuest) {
             return (
@@ -41,10 +45,12 @@ class GoogleAuth extends React.Component {
         }
     }
 
+    //When button is clicked, update state
     onContinueAsGuestClick = () => {
         this.props.continueAsGuest(true);
     }
 
+    //When Google OAuth signs in/out update state
     onAuthChange = (isSignedIn) => {
         if(isSignedIn) {
             this.props.signIn(this.auth.currentUser.get().getId());
@@ -54,14 +60,20 @@ class GoogleAuth extends React.Component {
         }
     }
 
+    //Sign in with Google OAuth
     onSignInClick = () => {
         this.auth.signIn();
     }
 
+    //Sign out with Google OAuth
     onSignOutClick = () => {
         this.auth.signOut();
     }
 
+    /*
+        If user is signed in display Sign Out
+        If user is signed in/is guest, run displayUserLogInOptions
+    */
     renderAuthButton() {
         if(this.props.isSignedIn === null) { 
             return null
