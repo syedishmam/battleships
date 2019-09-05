@@ -1,9 +1,10 @@
 import React from 'react';
+import GoogleAuth from './GoogleAuth';
 
 class LoginPage extends React.Component {
     render() {
         return (
-            <div>Log In</div>
+            <div><GoogleAuth /></div>
         )
     }
 }
