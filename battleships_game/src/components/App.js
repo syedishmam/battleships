@@ -4,7 +4,7 @@ import {Router, Route, Switch} from 'react-router-dom';
 import Grid from './Grid';
 import history from '../history'
 import '../styles/app.css'
-import Menu from './login-page/Menu';
+import Menu from './main-menu/Menu';
 
 function App() {
   return (
