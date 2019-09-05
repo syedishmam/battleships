@@ -1,5 +1,8 @@
-export const continueAsGuest = () => {
-  
+export const continueAsGuest = (boolean) => {
+  return {
+    type: 'CONTINUE_GUEST',
+    payload: boolean
+  }
 }
 
 export const signIn = (userId) => (dispatch) => {
