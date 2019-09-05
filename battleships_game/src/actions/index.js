@@ -1,5 +1,5 @@
 export const signIn = (userId) => (dispatch) => {
-      dispatch({type: 'SIGN_IN', payload: userId});
+  dispatch({type: 'SIGN_IN', payload: userId});
 }
 
 export const signOut = () => {
