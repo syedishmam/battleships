@@ -18,6 +18,29 @@ class GoogleAuth extends React.Component {
         });
     }
 
+    displayUserLogInOptions() {
+        if(this.props.isGuest) {
+            return (
+                <div>
+                    <button onClick={this.onSignInClick} className="btn btn-danger">
+                        <img className="googleIcon" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"/>
+                        Sign in With Google
+                    </button> <br />
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <button onClick={this.onSignInClick} className="btn btn-danger">
+                        <img className="googleIcon" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"/>
+                        Sign in With Google
+                    </button> <br />
+                    <button onClick={this.onContinueAsGuestClick} className="btn btn-info guestButtonWidth">Continue as Guest</button>
+                </div>
+            )
+        }
+    }
+
     onContinueAsGuestClick = () => {
         this.props.continueAsGuest(true);
     }
@@ -51,11 +74,7 @@ class GoogleAuth extends React.Component {
         } else {
             return (
                 <div>
-                    <button onClick={this.onSignInClick} className="btn btn-danger">
-                        <img className="googleIcon" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon"/>
-                        Sign in With Google
-                    </button> <br />
-                    <button onClick={this.onContinueAsGuestClick} className="btn btn-info guestButtonWidth">Continue as Guest</button>
+                    {this.displayUserLogInOptions()}
                 </div>
             )
         }
@@ -71,7 +90,10 @@ class GoogleAuth extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {isSignedIn: state.user.isSignedIn}
+    return {
+        isSignedIn: state.user.isSignedIn,
+        isGuest: state.isGuest.value
+    }
 }
 
 export default connect(mapStateToProps, {signIn, signOut, continueAsGuest})(GoogleAuth);
