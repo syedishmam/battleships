@@ -1,8 +1,15 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
+import {fetchPlayerStats} from '../../../actions';
 
 import './PlayerStats.css';
 
 class PlayerStats extends React.Component {
+    getPlayerStats(userId) {
+        this.props.fetchPlayerStats(userId);
+    }
+
     render() {
         return (
             <div>
@@ -48,4 +55,4 @@ class PlayerStats extends React.Component {
     }
 }
 
-export default PlayerStats;
+export default connect(null, {fetchPlayerStats})(PlayerStats);
