@@ -14,7 +14,7 @@ function App() {
         <Route path="/menu" component={Menu}/>
         <Route path="/game" component={() => <Grid type="Opponent"/>} />
         <Route path="/game" component={() => <Grid type="You" />} />
-        <Route path="/player-stats" component={PlayerStats} />
+        <Route path="/player-stats/:userId" component={PlayerStats} />
       </Switch>
     </Router>
   );
