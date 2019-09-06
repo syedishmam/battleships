@@ -1,3 +1,5 @@
+import playerStats from '../apis/stats';
+
 export const continueAsGuest = (boolean) => {
   return {
     type: 'CONTINUE_GUEST',
@@ -22,6 +24,7 @@ export const shootTile = (x,y) => {
   }
 }
 
-export const getPlayerStats = (userId) => async (dispatch) => {
-  dispatch({type: 'GET_PLAYER_STATS', payload: userId});
+export const fetchPlayerStats = (userId = 1234) => async (dispatch) => {
+  const response = await playerStats.get(`/player-stats/${userId}`)
+  dispatch({type: 'FETCH_PLAYER_STATS', payload: response});
 }
