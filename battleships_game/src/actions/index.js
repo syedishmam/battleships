@@ -21,3 +21,7 @@ export const shootTile = (x,y) => {
     payload: {x,y}
   }
 }
+
+export const getPlayerStats = (userId) => async (dispatch) => {
+  dispatch({type: 'GET_PLAYER_STATS', payload: userId});
+}
