@@ -24,7 +24,7 @@ export const shootTile = (x,y) => {
   }
 }
 
-export const fetchPlayerStats = (userId) => async (dispatch) => {
-  const response = await playerStats.get(`/player-stats/${userId}`)
-  dispatch({type: 'FETCH_PLAYER_STATS', payload: response});
+export const fetchPlayerStats = (id) => async (dispatch) => {
+  const response = await playerStats.get(`/playerStats/${id}`)
+  dispatch({type: 'FETCH_PLAYER_STATS', payload: response.data});
 }
