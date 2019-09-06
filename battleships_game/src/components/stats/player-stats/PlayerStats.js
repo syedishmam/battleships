@@ -6,14 +6,22 @@ import {fetchPlayerStats} from '../../../actions';
 import './PlayerStats.css';
 
 class PlayerStats extends React.Component {
-    getPlayerStats() {
-        this.props.fetchPlayerStats(this.props.userId);
+    componentDidMount() {
+        this.getPlayerStats();
     }
 
-    renderStatsTable() {
-        this.getPlayerStats();
-        return (
-            <table className="text-center">
+    getPlayerStats() {
+        if(this.props.userId) {
+            this.props.fetchPlayerStats(this.props.userId);
+        } else {
+            this.props.fetchPlayerStats(document.URL.substring(35));
+        }
+    }
+
+    renderStatsTable = () => {
+        if(this.props.currentPlayerStats) {
+            return (
+                <table className="text-center">
                 <tbody>
                     <tr>
                         <th>Stat</th>
@@ -21,35 +29,38 @@ class PlayerStats extends React.Component {
                     </tr>
                     <tr>
                         <th>Wins</th>
-                        <th>5</th>
+                        <th>{this.props.currentPlayerStats.stats[0].wins}</th>
                     </tr>
                     <tr>
                         <th>Losses</th>
-                        <th>3</th>
+                        <th>{this.props.currentPlayerStats.stats[0].losses}</th>
                     </tr>
                     <tr>
                         <th>WLR</th>
-                        <th>1.66</th>
+                        <th>{this.props.currentPlayerStats.stats[0].WLR}</th>
                     </tr>
                     <tr>
                         <th>Ships Destroyed</th>
-                        <th>14</th>
+                        <th>{this.props.currentPlayerStats.stats[0].shipsDestroyed}</th>
                     </tr>
                     <tr>
                         <th>Hits</th>
-                        <th>35</th>
+                        <th>{this.props.currentPlayerStats.stats[0].hits}</th>
                     </tr>
                     <tr>
                         <th>Misses</th>
-                        <th>54</th>
+                        <th>{this.props.currentPlayerStats.stats[0].misses}</th>
                     </tr>
                     <tr>
                         <th>HMR</th>
-                        <th>0.64</th>
+                        <th>{this.props.currentPlayerStats.stats[0].HMR}</th>
                     </tr>
                 </tbody>
-        </table>
-        )
+            </table>
+            )
+        } else {
+            return <div>Loading...</div>
+        }
     }
 
     render() {
@@ -65,7 +76,7 @@ class PlayerStats extends React.Component {
 const mapStateToProps = (state) => {
     return {
         userId: state.user.userId,
-        currentPlayerStates: state.stats.currentPlayerStates
+        currentPlayerStats: state.stats.currentPlayerStats
     }
 }
 
