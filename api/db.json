@@ -1,0 +1,19 @@
+{
+    "player-stats": [
+        {
+            "userId": "1234",
+            "stats": [
+                {
+                    "wins": 0,
+                    "losses": 0,
+                    "WLR": 0,
+                    "ships-destroyed": 0,
+                    "hits": 0,
+                    "misses": 0,
+                    "HMR": 0
+                }
+            ],
+            "id": 1
+        }
+    ]
+}
