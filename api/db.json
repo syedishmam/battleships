@@ -1,19 +1,18 @@
 {
-    "player-stats": [
+    "playerStats": [
         {
-            "userId": "111866484180364202436",
             "stats": [
                 {
                     "wins": 0,
                     "losses": 0,
                     "WLR": 0,
-                    "ships-destroyed": 0,
+                    "shipsDestroyed": 0,
                     "hits": 0,
                     "misses": 0,
                     "HMR": 0
                 }
             ],
-            "id": 1
+            "id": "111866484180364202436"
         }
     ]
 }
