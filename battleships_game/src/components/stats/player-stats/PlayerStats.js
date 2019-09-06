@@ -7,7 +7,7 @@ class PlayerStats extends React.Component {
         return (
             <div>
                 <div className="display-1 title text-center">Player Stats</div>
-                <table>
+                <table className="text-center">
                     <tbody>
                         <tr>
                             <th>Stat</th>
