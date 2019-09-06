@@ -12,10 +12,8 @@ function App() {
     <Router history={history}>
       <Switch>
         <Route path="/menu" component={Menu}/>
-        <div className="grid-container">
-            <Route path="/game" component={() => <Grid type="Opponent"/>} />
-            <Route path="/game" component={() => <Grid type="You" />} />
-        </div>
+        <Route path="/game" component={() => <Grid type="Opponent"/>} />
+        <Route path="/game" component={() => <Grid type="You" />} />
         <Route path="/player-stats" component={PlayerStats} />
       </Switch>
     </Router>
