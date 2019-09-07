@@ -18,7 +18,15 @@
     ],
     "globalStats": [
         {
-            "Top Ranked": "No one"
+            "global": [
+                {
+                    "1": "Ish",
+                    "2": "Niaz",
+                    "3": "Bill",
+                    "4": "Tom",
+                    "5": "Bob"
+                }
+            ]
         }
     ]
 }
