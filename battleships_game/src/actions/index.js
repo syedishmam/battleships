@@ -17,10 +17,10 @@ export const signOut = () => {
   }
 }
 
-export const shootTile = (x,y) => {
+export const shootTile = (x) => {
   return {
     type: 'SHOOT_TILE',
-    payload: {x,y}
+    payload: x
   }
 }
 
