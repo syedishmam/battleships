@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 class Tile extends React.Component{
 
   updateTiles(){
-    //  idk 
+    //  idk don
   }
 
   render(){

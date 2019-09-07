@@ -1,6 +1,7 @@
 export default (state= {shotTiles:null},action) => {
   if (action.type === 'SHOOT_TILE'){
-    return {...state,shootTile(shotTiles)}
+    console.log(action.payload)
+    return state
   }
   else{
     return state
