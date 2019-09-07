@@ -2,9 +2,14 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
+import {fetchAllPlayerStats} from '../../../actions';
 import './GlobalStats.css';
 
 class GlobalStats extends React.Component {
+    componentDidMount() {
+        this.props.fetchAllPlayerStats();
+    }
+
     renderStatsTable() {
         return (
             <table>
@@ -48,7 +53,7 @@ class GlobalStats extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {}
+    return {allPlayerStats: state.stats.allPlayerStats}
 }
 
-export default connect(mapStateToProps)(GlobalStats);
+export default connect(mapStateToProps, {fetchAllPlayerStats})(GlobalStats);
