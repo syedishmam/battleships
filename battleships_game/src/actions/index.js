@@ -1,4 +1,4 @@
-import playerStats from '../apis/playerStats';
+import db from '../apis/stats';
 
 export const continueAsGuest = (boolean) => {
   return {
@@ -24,8 +24,13 @@ export const shootTile = (x,y) => {
   }
 }
 
+export const fetchAllPlayerStats = () => async (dispatch) => {
+  const response = await db.get(`/playerStats`);
+  dispatch({type: 'FETCH_ALL_PLAYER_STATS', payload: response.data});
+}
+
 export const fetchPlayerStats = (id) => async (dispatch) => {
-  const response = await playerStats.get(`/playerStats/${id}`)
+  const response = await db.get(`/playerStats/${id}`)
   dispatch({type: 'FETCH_PLAYER_STATS', payload: response.data});
 }
 
