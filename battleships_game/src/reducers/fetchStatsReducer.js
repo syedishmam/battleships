@@ -1,9 +1,15 @@
 export default (state = {
-    currentPlayerStats: null
+    currentPlayerStats: null,
+    allPlayerStats: null
 }, action) => {
-    if(action.type === 'FETCH_PLAYER_STATS') {
-        return {...state, currentPlayerStats: action.payload}
-    } else {
-        return state
+    switch(action.type) {
+        case 'FETCH_PLAYER_STATS': 
+            return {...state, currentPlayerStats: action.payload};
+        
+        case 'FETCH_ALL_PLAYER_STATS':
+            return {...state, allPlayerStats: action.payload};
+
+        default:
+            return state;
     }
 }
