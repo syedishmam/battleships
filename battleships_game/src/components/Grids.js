@@ -5,15 +5,10 @@ import '../styles/grid.css';
 class Grids extends React.Component{
   
   makeGrid(type){
-
     let tiles = []
-    
     for(var i = 0; i < 48; i ++){
-      this.props.type === 'Opponent' ? 
-      (tiles.push(<Tile type="Opponent" num={i} key={i} />)):
-      (tiles.push(<Tile type="You" num={i} key={i} />))
+      tiles.push(<Tile type={type} num={i} key={i} />)
     }
-
     return tiles
   }
 
