@@ -4,10 +4,14 @@
 
 table, tr, th {
     border: solid black 1px;
-    padding: 0.5rem;
+    padding: 0.75rem;
 }
 
 table {
     margin: auto;
-    width: 50%; 
+    width: 70%; 
+}
+
+th {
+    height: 40px;
 }
