@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 import './GlobalStats.css';
 
@@ -12,7 +14,7 @@ class GlobalStats extends React.Component {
                     </tr>
                     <tr>
                         <th className="rankingNumericalPosition">1.</th>
-                        <th><a href="/">Ish</a></th>
+                        <th><Link to={`/player-stats/`}>Ish</Link></th>
                     </tr>
                     <tr>
                         <th className="rankingNumericalPosition">2.</th>
@@ -45,4 +47,8 @@ class GlobalStats extends React.Component {
     }
 }
 
-export default GlobalStats;
+const mapStateToProps = (state) => {
+    return {}
+}
+
+export default connect(mapStateToProps)(GlobalStats);
