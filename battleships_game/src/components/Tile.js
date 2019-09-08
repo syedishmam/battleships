@@ -7,7 +7,16 @@ import {connect} from 'react-redux';
 class Tile extends React.Component{
 
   updateTiles(){
-    //  idk don
+    var updatedTiles;
+    if (this.props.shotTiles){
+      var tile_num = this.props.num
+      updatedTiles = {...this.props.shotTiles,tile_num}
+      this.props.shootTile(updatedTiles)
+    }
+    else{
+      updatedTiles = this.props.num
+      this.props.shootTile(updatedTiles)
+    }
   }
 
   render(){
