@@ -10,7 +10,6 @@ class GlobalStats extends React.Component {
         this.props.fetchAllPlayerStats();
     }
 
-<<<<<<< HEAD
     componentDidUpdate() {
         this.mapAllPlayerUserIds();
     }
@@ -27,8 +26,6 @@ class GlobalStats extends React.Component {
         }
     }
 
-=======
->>>>>>> df4822971c26d3054d7afddb5d0d7af4bb7889d7
     renderStatsTable() {
         return (
             <table>
