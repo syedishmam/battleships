@@ -10,6 +10,22 @@ class GlobalStats extends React.Component {
         this.props.fetchAllPlayerStats();
     }
 
+    componentDidUpdate() {
+        this.mapAllPlayerUserIds();
+    }
+
+    mapAllPlayerUserIds() {
+        const playerIds = [];
+        if(this.props.allPlayerStats) {
+            this.props.allPlayerStats.map(player => {
+                playerIds.push(player.id);
+                console.log(playerIds);
+            }); 
+        } else {
+            console.log('Loading Player Stats...');
+        }
+    }
+
     renderStatsTable() {
         return (
             <table>
