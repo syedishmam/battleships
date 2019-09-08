@@ -26,6 +26,7 @@ class GlobalStats extends React.Component {
         }
     }
 
+    //comment
     renderStatsTable() {
         return (
             <table>
