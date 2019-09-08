@@ -1,6 +1,6 @@
 export default (state = [
     {
-      username:'p_one',
+      username:'opponent',
       previous_moves: {},
       tilesShot:{},
       ships:[
@@ -19,7 +19,7 @@ export default (state = [
       ]  
     },
     {
-      username:'p_two',
+      username:'you',
       previous_moves: {},
       tilesShot:{},
       ships:[

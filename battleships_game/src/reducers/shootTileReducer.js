@@ -1,10 +1,9 @@
-export default (state={},action) => {
-  switch(action.type){
-    case 'SHOOT_TILE':
-      return {
-        ...state, cors:action.payload
-      }
-    default:
-      return state
+export default (state= {shotTiles:null},action) => {
+  if (action.type === 'SHOOT_TILE'){
+    console.log(action.payload)
+    return state
+  }
+  else{
+    return state
   }
 }

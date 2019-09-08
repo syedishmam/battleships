@@ -6,13 +6,16 @@ import {connect} from 'react-redux';
 
 class Tile extends React.Component{
 
+  updateTiles(){
+    //  idk don
+  }
+
   render(){
 
     // CONDITIONAL RENDER OF TILE BASED ON GRID TYPE //
     var tile = null
-
     this.props.type === 'Opponent' ? 
-    (tile = <div className="tile" onClick={() => this.props.shootTile(1,2)}></div>):
+    (tile = <div className="tile" onClick={() => this.props.shootTile(this.props.num)}></div>):
     (tile = <div className="tile"></div>)
 
     return tile
@@ -25,8 +28,6 @@ function mapStateToProps(state){
   var ship_one_cor = state.players[0].ships[0].tiles
   var ship_two_cor = state.players[0].ships[1].tiles
   var ship_locations = [...ship_one_cor,...ship_two_cor]
-
-  console.log(ship_locations)
 
   return(
     state.players[0]
