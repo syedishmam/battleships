@@ -4,6 +4,8 @@ export default (state= {shotTiles:null},action) => {
     return {...state,shootTile:tile_num}
   }
   else{
-    return state
+    return (
+      'test'
+    )
   }
 }
