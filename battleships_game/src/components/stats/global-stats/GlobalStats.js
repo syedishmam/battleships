@@ -10,23 +10,19 @@ class GlobalStats extends React.Component {
         this.props.fetchAllPlayerStats();
     }
 
-    componentDidUpdate() {
-        this.mapAllPlayerUserIds();
-    }
-
-    mapAllPlayerUserIds() {
-        const playerIds = [];
-        if(this.props.allPlayerStats) {
-            this.props.allPlayerStats.map(player => {
-                playerIds.push(player.id);
-                console.log(playerIds);
-            }); 
-        } else {
-            console.log('Loading Player Stats...');
+    /* orderPlayerRankings() {
+        const ranked = [];
+        playerStats = this.props.allPlayerStats
+        if(playerStats) {
+            [playerStats].sort(function(a, b) {
+                if(a > b) 
+                    ranked.push(a);
+                else if(a < b)
+                    ranked
+            });
         }
-    }
+    } */
 
-    //comment
     renderStatsTable() {
         return (
             <table>
