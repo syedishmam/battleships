@@ -1,14 +1,13 @@
 import React from 'react'
 import '../styles/tile.css'
-import {addTile,shootTile} from '../actions/index';
+import {shootTile} from '../actions/index';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
 class Tile extends React.Component{
 
   updateTile(num){
-    var tile_num = this.props.num
-
+    
     if (num in this.props.enemy_ships){
       // STATUS 2 REPRESENTS A HIT
       this.props.shootTile(num,2)
@@ -19,9 +18,12 @@ class Tile extends React.Component{
     }
   }
 
+  getTileNum(){
+    return this.props.num
+  }
+
   render(){
     var tiles = this.props.tiles
-
     // RENDER OPPONENT TILES
     if (this.props.type === 'Opponent'){
 
@@ -67,7 +69,7 @@ function mapStateToProps(state){
 }
 
 function matchDispatchToProps(dispatch){
-  return bindActionCreators({addTile:addTile, shootTile: shootTile}, dispatch)
+  return bindActionCreators({shootTile: shootTile}, dispatch)
 }
 
 export default connect(mapStateToProps,matchDispatchToProps)(Tile);
