@@ -25,7 +25,7 @@ class Tile extends React.Component{
   render(){
     var tiles = this.props.tiles
     // RENDER OPPONENT TILES
-    if (this.props.type === 'Opponent'){
+    if (this.props.type === -1){
 
       var status = tiles[this.props.num].status
 

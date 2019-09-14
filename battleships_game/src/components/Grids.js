@@ -9,23 +9,21 @@ class Grids extends React.Component{
   
   makeGrid(type){
     let tiles = []
-    console.log(type)
+
     if(type === 'Opponent'){
       for(var i = 0; i < 48; i++){
         // ADD TILE DATA TO STATE WHILE ITERATING SO TILE CLASS CAN READ IT WHEN RENDERED
-        this.props.addTile('Opponent',i,0)
-        tiles.push(<Tile type='Opponent' num={i} key={i} />)
+        this.props.addTile(-1,i,0)
+        tiles.push(<Tile type={-1} num={i} key={i} />)
       }
     }
     else{
-      for(var i = 0; i < 48; i++){
+      for(i = 0; i < 48; i++){
         // ADD TILE DATA TO STATE WHILE ITERATING SO TILE CLASS CAN READ IT WHEN RENDERED
-        this.props.addTile('You',i,0)
-        tiles.push(<Tile type='You' num={i} key={i} />)
+        this.props.addTile(1,i,0)
+        tiles.push(<Tile type={1} num={i} key={i} />)
       }
     }
-
-    console.log(tiles)
  
     return tiles
   }
