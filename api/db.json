@@ -3,7 +3,7 @@
         {
             "stats": [
                 {
-                    "wins": 1,
+                    "wins": 0,
                     "losses": 0,
                     "WLR": 0,
                     "shipsDestroyed": 0,
@@ -18,7 +18,7 @@
         {
             "stats": [
                 {
-                    "wins": 2,
+                    "wins": 0,
                     "losses": 0,
                     "WLR": 0,
                     "shipsDestroyed": 0,
@@ -33,7 +33,7 @@
         {
             "stats": [
                 {
-                    "wins": 4,
+                    "wins": 0,
                     "losses": 0,
                     "WLR": 0,
                     "shipsDestroyed": 0,
@@ -48,7 +48,7 @@
         {
             "stats": [
                 {
-                    "wins": 10,
+                    "wins": 0,
                     "losses": 0,
                     "WLR": 0,
                     "shipsDestroyed": 0,
@@ -63,7 +63,7 @@
         {
             "stats": [
                 {
-                    "wins": 3,
+                    "wins": 0,
                     "losses": 0,
                     "WLR": 0,
                     "shipsDestroyed": 0,
