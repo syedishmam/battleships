@@ -16,17 +16,9 @@ class GlobalStats extends React.Component {
         this.orderAllPlayersByWins();
     }
 
-    placeAllPlayersInArray() {
-        let players = [];
-        for(let i = 0; i < this.props.allPlayerStats.length; i++) {
-            players.push(this.props.allPlayerStats[i]);
-        }
-        return players;  
-    }
-
     orderAllPlayersByWins() {
         if(this.state.rankings === null) {
-            let players = this.placeAllPlayersInArray();
+            let players = this.props.allPlayerStats;
             players.sort((a, b) => {return b.stats[0].wins - a.stats[0].wins;});
             console.log(players);
             this.setState({rankings: players});
