@@ -13,16 +13,17 @@ class GlobalStats extends React.Component {
     }
 
     componentDidUpdate() {
-        this.orderAllPlayersByWins();
+        if(this.state.rankings === null) {
+            this.setState({rankings: this.orderAllPlayersByWins()});
+        }
     }
 
+    //Reorganize players from database to be ordered by how many wins they have
     orderAllPlayersByWins() {
-        if(this.state.rankings === null) {
             let players = this.props.allPlayerStats;
             players.sort((a, b) => {return b.stats[0].wins - a.stats[0].wins;});
             console.log(players);
-            this.setState({rankings: players});
-        }
+            return players;
     }
 
     renderStatsTable() {
