@@ -1,12 +1,12 @@
 .grid-container{
   height: 80vh;
   width: 100vw; 
+  margin-top:5vh;
 }
 
 .grid{
   height: 300px;
   width: 300px;
-
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;

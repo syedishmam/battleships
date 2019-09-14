@@ -17,10 +17,19 @@ export const signOut = () => {
   }
 }
 
-export const shootTile = (x) => {
+export const addTile = (owner,number) => {
+  return{
+    type: 'ADD_TILE',
+    owner: owner,
+    number: number
+  }
+}
+
+export const shootTile = (number,status) => {
   return {
     type: 'SHOOT_TILE',
-    payload: x
+    number: number,
+    status: status
   }
 }
 
