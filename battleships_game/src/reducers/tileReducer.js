@@ -3,9 +3,11 @@ export default (state = [],action) => {
     case 'ADD_TILE':
       return [...state,{owner:action.owner, number:action.number}]
     case 'SHOOT_TILE':
-      // UDPATE THE SPECIFIC TILE 
-      console.log(state[action.number])
-      return state
+      var num = action.number
+      var status = action.status
+      var new_state = [...state]
+      new_state[num].status = status 
+      return new_state
     default:
       return state
   }
