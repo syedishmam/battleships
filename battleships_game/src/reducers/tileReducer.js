@@ -1,7 +1,7 @@
 export default (state = [],action) => {
   switch(action.type){
     case 'ADD_TILE':
-      return [...state,{owner:action.owner, number:action.number}]
+      return [...state,{owner:action.owner, number:action.number, status:action.status}]
     case 'SHOOT_TILE':
       var num = action.number
       var status = action.status

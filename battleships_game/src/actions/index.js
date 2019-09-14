@@ -17,11 +17,12 @@ export const signOut = () => {
   }
 }
 
-export const addTile = (owner,number) => {
+export const addTile = (owner,number,status) => {
   return{
     type: 'ADD_TILE',
     owner: owner,
-    number: number
+    number: number,
+    status:0,
   }
 }
 

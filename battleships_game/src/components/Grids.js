@@ -1,13 +1,23 @@
 import React from 'react';
 import Tile from './Tile';
+import {addTile} from '../actions/index';
 import '../styles/grid.css';
+import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class Grids extends React.Component{
   
   makeGrid(type){
     let tiles = []
     for(var i = 0; i < 48; i ++){
-      tiles.push(<Tile type={type} num={i} key={i} />)
+      if (type === 'Opponent'){
+        this.props.addTile('Opponent',i,0)
+        tiles.push(<Tile type='Opponent' num={i} />)
+      }
+      else{
+        this.props.addTile('You',i,0)
+        tiles.push(<Tile type='You' num={i} />)
+      }
     }
     return tiles
   }
@@ -30,4 +40,8 @@ class Grids extends React.Component{
   }
 }
 
-export default Grids;
+function matchDispatchToProps(dispatch){
+  return bindActionCreators({addTile:addTile},dispatch)
+}
+
+export default connect(null,matchDispatchToProps)(Grids);
