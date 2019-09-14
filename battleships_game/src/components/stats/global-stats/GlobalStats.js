@@ -6,6 +6,8 @@ import {fetchAllPlayerStats} from '../../../actions';
 import './GlobalStats.css';
 
 class GlobalStats extends React.Component {
+    state = {rankings: null};
+
     componentDidMount() {
         this.props.fetchAllPlayerStats();
     }
@@ -23,9 +25,12 @@ class GlobalStats extends React.Component {
     }
 
     orderAllPlayersByWins() {
-        let players = this.placeAllPlayersInArray();
-        players.sort((a, b) => {return b.stats[0].wins - a.stats[0].wins;});
-        console.log(players);
+        if(this.state.rankings === null) {
+            let players = this.placeAllPlayersInArray();
+            players.sort((a, b) => {return b.stats[0].wins - a.stats[0].wins;});
+            console.log(players);
+            this.setState({rankings: players});
+        }
     }
 
     renderStatsTable() {
