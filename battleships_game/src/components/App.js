@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route path="/menu" component={Menu}/>
         <Route path="/game" component={Grids} />
-        <Route path="/player-stats/:userId" component={YourStats} />
+        <Route path="/your-stats/:userId" component={YourStats} />
         <Route path="/global-stats" component={GlobalStats} />
       </Switch>
     </Router>
