@@ -34,12 +34,12 @@ class Tile extends React.Component{
         return <div className='tile' onClick={() => this.updateTile(this.props.num)}></div>
       }
 
-      // RE-RENDER IF A MISS IS REGISTERED
+      // RE-RENDER IF A MISS IS REGISTERED -- GRAY TILE
       if(status === 1){
         return <div className='tile' onClick={() => this.updateTile(this.props.num)}> <div className='tile-miss'></div> </div>
       }
 
-      // RE-RENDER IF A HIT IS REGISTERED
+      // RE-RENDER IF A HIT IS REGISTERED -- RED TILE
       else{
         return <div className='tile' onClick={() => this.updateTile(this.props.num)}> <div className='tile-hit'></div> </div>
       }
