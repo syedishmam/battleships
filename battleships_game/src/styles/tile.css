@@ -1,12 +1,19 @@
 .tile{
   flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   border:1px solid black;
 }
 
 .tile-hit{
+  height:50%;
+  width:50%;
   background-color:red;
 }
 
 .tile-miss{
+  height:50%;
+  width:50%;
   background-color:gray;
 }
