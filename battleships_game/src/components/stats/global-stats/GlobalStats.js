@@ -66,23 +66,23 @@ class GlobalStats extends React.Component {
                         </tr>
                         <tr>
                             <th className="rankingNumericalPosition">1.</th>
-                            <th><Link to={`/player-stats/`}>{this.state.rankings[0].userName}</Link></th>
+                            <th><Link to={`/player-stats/${this.state.rankings[0].id}`}>{this.state.rankings[0].userName}</Link></th>
                         </tr>
                         <tr>
                             <th className="rankingNumericalPosition">2.</th>
-                            <th><Link to={`/player-stats/`}>{this.state.rankings[1].userName}</Link></th>
+                            <th><Link to={`/player-stats/${this.state.rankings[1].id}`}>{this.state.rankings[1].userName}</Link></th>
                         </tr>
                         <tr>
                             <th className="rankingNumericalPosition">3.</th>
-                            <th><Link to={`/player-stats/`}>{this.state.rankings[2].userName}</Link></th>
+                            <th><Link to={`/player-stats/${this.state.rankings[2].id}`}>{this.state.rankings[2].userName}</Link></th>
                         </tr>
                         <tr>
                             <th className="rankingNumericalPosition">4.</th>
-                            <th><Link to={`/player-stats/`}>{this.state.rankings[3].userName}</Link></th>
+                            <th><Link to={`/player-stats/${this.state.rankings[3].id}`}>{this.state.rankings[3].userName}</Link></th>
                         </tr>
                         <tr>
                             <th className="rankingNumericalPosition">5.</th>
-                            <th><Link to={`/player-stats/`}>{this.state.rankings[4].userName}</Link></th>
+                            <th><Link to={`/player-stats/${this.state.rankings[4].id}`}>{this.state.rankings[4].userName}</Link></th>
                         </tr>
                     </tbody>
                 </table>
