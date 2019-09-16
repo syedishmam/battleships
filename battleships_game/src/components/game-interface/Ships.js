@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/ships.css';
+import '../../styles/ships.css';
 
 class Ships extends React.Component{
   

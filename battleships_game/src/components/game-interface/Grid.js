@@ -5,7 +5,7 @@ import '../../styles/grid.css';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-class Grids extends React.Component{
+class Grid extends React.Component{
   
   makeGrid(type){
     let tiles = []
@@ -30,17 +30,11 @@ class Grids extends React.Component{
 
   render()
   {
-    var grid_one = this.makeGrid('Opponent')
-    var grid_two = this.makeGrid('You')
-    
+    var grid = this.makeGrid(this.props.type)
+
     return(
-      <div className="d-flex flex-column align-items-center justify-content-center grid-container">
-        <div className="grid">
-          {grid_one} 
-        </div>
-        <div className="grid">
-          {grid_two} 
-        </div>
+      <div className="grid">
+        {grid} 
       </div>
     )
   }
@@ -50,4 +44,4 @@ function matchDispatchToProps(dispatch){
   return bindActionCreators({addTile:addTile},dispatch)
 }
 
-export default connect(null,matchDispatchToProps)(Grids);
+export default connect(null,matchDispatchToProps)(Grid);

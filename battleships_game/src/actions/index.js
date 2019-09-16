@@ -34,6 +34,12 @@ export const shootTile = (number,status) => {
   }
 }
 
+export const finishSetup = () => {
+  return{
+    type: 'FINISH_SETUP'
+  }
+}
+
 export const fetchAllPlayerStats = () => async (dispatch) => {
   const response = await db.get(`/playerStats`);
   dispatch({type: 'FETCH_ALL_PLAYER_STATS', payload: response.data});

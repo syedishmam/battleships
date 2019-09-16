@@ -5,7 +5,7 @@ import playersReducer from './playersReducer';
 import tileReducer from './tileReducer';
 import continueAsGuest from './continueAsGuestReducer';
 import fetchStatsReducer from './fetchStatsReducer';
-import shipsReducer from './shipsReducer';
+import setupReducer from './setupReducer';
 
 export default combineReducers({
     players: playersReducer,
@@ -13,5 +13,5 @@ export default combineReducers({
     tiles: tileReducer,
     isGuest: continueAsGuest,
     stats: fetchStatsReducer,
-    ships: shipsReducer
+    setup: setupReducer
 });

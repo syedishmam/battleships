@@ -1,7 +1,7 @@
 import React from 'react';
 import {Router, Route, Switch} from 'react-router-dom';
 
-import Grids from './game-interface/Grids';
+import Game from './game-interface/Game';
 import history from '../history'
 import '../styles/app.css'
 import Menu from './main-menu/Menu';
@@ -13,7 +13,7 @@ function App() {
     <Router history={history}>
       <Switch>
         <Route path="/menu" component={Menu}/>
-        <Route path="/game" component={Grids} />
+        <Route path="/game" component={Game} />
         <Route path="/your-stats/:userId" component={YourStats} />
         <Route path="/global-stats" component={GlobalStats} />
       </Switch>
