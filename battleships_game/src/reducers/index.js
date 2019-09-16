@@ -5,11 +5,13 @@ import playersReducer from './playersReducer';
 import tileReducer from './tileReducer';
 import continueAsGuest from './continueAsGuestReducer';
 import fetchStatsReducer from './fetchStatsReducer';
+import shipsReducer from './shipsReducer';
 
 export default combineReducers({
     players: playersReducer,
     user: signInAndOutReducer,
     tiles: tileReducer,
     isGuest: continueAsGuest,
-    stats: fetchStatsReducer
+    stats: fetchStatsReducer,
+    ships: shipsReducer
 });

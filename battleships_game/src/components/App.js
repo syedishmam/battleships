@@ -1,7 +1,7 @@
 import React from 'react';
 import {Router, Route, Switch} from 'react-router-dom';
 
-import Grids from './Grids';
+import Grids from './game-interface/Grids';
 import history from '../history'
 import '../styles/app.css'
 import Menu from './main-menu/Menu';

@@ -1,7 +1,7 @@
 import React from 'react';
 import Tile from './Tile';
-import {addTile} from '../actions/index';
-import '../styles/grid.css';
+import {addTile} from '../../actions/index';
+import '../../styles/grid.css';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 

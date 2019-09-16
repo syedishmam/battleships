@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/tile.css'
-import {shootTile} from '../actions/index';
+import '../../styles/tile.css'
+import {shootTile} from '../../actions/index';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
