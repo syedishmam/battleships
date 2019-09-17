@@ -53,3 +53,10 @@ export const fetchPlayerStats = (id) => async (dispatch) => {
 export const fetchGlobalStats = () => async (dispatch) => {
   //const response = await globalStats.get(`/globalStats`);
 }
+
+export const storeSelectedPlayerData = (user) => {
+  return {
+    type: 'STORE_SELECTED_PLAYER_DATA',
+    payload: user
+  }
+}
