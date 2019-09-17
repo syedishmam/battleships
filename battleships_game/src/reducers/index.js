@@ -6,6 +6,7 @@ import tileReducer from './tileReducer';
 import continueAsGuest from './continueAsGuestReducer';
 import fetchStatsReducer from './fetchStatsReducer';
 import setupReducer from './setupReducer';
+import selectedPlayerDataReducer from './selectedPlayerDataReducer';
 
 export default combineReducers({
     players: playersReducer,
@@ -13,5 +14,6 @@ export default combineReducers({
     tiles: tileReducer,
     isGuest: continueAsGuest,
     stats: fetchStatsReducer,
+    selectedPlayer: selectedPlayerDataReducer,
     setup: setupReducer
 });
