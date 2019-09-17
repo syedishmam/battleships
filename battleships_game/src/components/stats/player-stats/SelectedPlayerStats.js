@@ -1,10 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+import PlayerStats from './PlayerStats';
+
 class SelectedPlayerStats extends React.Component {
-    componentDidMount() {
-        
-    }
 
     renderStatsTable = () => {
         if(this.props.player) {
@@ -53,7 +52,7 @@ class SelectedPlayerStats extends React.Component {
 
     render() {
         return (
-            <div>SelectedPlayerStats</div>
+            <PlayerStats renderTable={this.renderStatsTable} title="Player Stats" />
         )
     }
 }
