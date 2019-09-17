@@ -1,9 +1,8 @@
 export default (state = {
-    selectedPlayer: null
 }, action) => {
     switch(action.type) {
-        case 'STORE_SELECTED_PLAYER_STATS':
-            return {...state, selectedPlayer: action.payload};
+        case 'STORE_SELECTED_PLAYER_DATA':
+            return {...state, player: action.payload};
 
         default:
             return state;
