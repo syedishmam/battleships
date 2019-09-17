@@ -11,6 +11,7 @@ class YourStats extends React.Component {
         this.getPlayerStats();
     }
 
+    //If userId prop is not null run fetchPlayerStats action else get userId from URL
     getPlayerStats() {
         if(this.props.userId) {
             this.props.fetchPlayerStats(this.props.userId);

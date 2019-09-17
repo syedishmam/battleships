@@ -67,7 +67,10 @@ class GlobalStats extends React.Component {
                         <tr>
                             <th className="rankingNumericalPosition">1.</th>
                             <th>
-                                <Link to={`/selected-player-stats/${this.state.rankings[0].id}`} onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[0])}>
+                                <Link 
+                                    to={`/selected-player-stats/${this.state.rankings[0].id}`} 
+                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[0])}
+                                >
                                 {this.state.rankings[0].userName}
                                 </Link>
                             </th>
@@ -75,7 +78,10 @@ class GlobalStats extends React.Component {
                         <tr>
                             <th className="rankingNumericalPosition">2.</th>
                             <th>
-                                <Link to={`/selected-player-stats/${this.state.rankings[1].id}`} onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[1])}>
+                                <Link 
+                                    to={`/selected-player-stats/${this.state.rankings[1].id}`} 
+                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[1])}
+                                >
                                     {this.state.rankings[1].userName}
                                 </Link>
                             </th>
@@ -83,7 +89,10 @@ class GlobalStats extends React.Component {
                         <tr>
                             <th className="rankingNumericalPosition">3.</th>
                             <th>
-                                <Link to={`/selected-player-stats/${this.state.rankings[2].id}`} onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[2])}>
+                                <Link 
+                                    to={`/selected-player-stats/${this.state.rankings[2].id}`} 
+                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[2])}
+                                >
                                     {this.state.rankings[2].userName}
                                 </Link>
                             </th>
@@ -91,7 +100,10 @@ class GlobalStats extends React.Component {
                         <tr>
                             <th className="rankingNumericalPosition">4.</th>
                             <th>
-                                <Link to={`/selected-player-stats/${this.state.rankings[3].id}`} onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[3])}>
+                                <Link 
+                                    to={`/selected-player-stats/${this.state.rankings[3].id}`} 
+                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[3])}
+                                >
                                     {this.state.rankings[3].userName}
                                 </Link>
                             </th>
@@ -99,7 +111,10 @@ class GlobalStats extends React.Component {
                         <tr>
                             <th className="rankingNumericalPosition">5.</th>
                             <th>
-                                <Link to={`/selected-player-stats/${this.state.rankings[4].id}`} onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[4])}>
+                                <Link 
+                                    to={`/selected-player-stats/${this.state.rankings[4].id}`} 
+                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[4])}
+                                >
                                     {this.state.rankings[4].userName}
                                 </Link>
                             </th>
