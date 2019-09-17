@@ -66,7 +66,7 @@ class YourStats extends React.Component {
 
     render() {
         return (
-            <PlayerStats renderTable={this.renderStatsTable} />
+            <PlayerStats renderTable={this.renderStatsTable} title="Your Stats"/>
         )
     }
 }
