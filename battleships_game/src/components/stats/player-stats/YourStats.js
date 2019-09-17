@@ -16,7 +16,7 @@ class YourStats extends React.Component {
         if(this.props.userId) {
             this.props.fetchPlayerStats(this.props.userId);
         } else {
-            this.props.fetchPlayerStats(document.URL.substring(35));
+            this.props.fetchPlayerStats(document.URL.substring(33));
         }
     }
 
