@@ -21,7 +21,7 @@ class YourStats extends React.Component {
     }
 
     renderStatsTable = () => {
-        if(this.props.currentPlayerStats) {
+        if(this.props.currentUserStats) {
             return (
                 <table className="text-center">
                 <tbody>
@@ -31,31 +31,31 @@ class YourStats extends React.Component {
                     </tr>
                     <tr>
                         <th>Wins</th>
-                        <th>{this.props.currentPlayerStats.stats[0].wins}</th>
+                        <th>{this.props.currentUserStats.stats[0].wins}</th>
                     </tr>
                     <tr>
                         <th>Losses</th>
-                        <th>{this.props.currentPlayerStats.stats[0].losses}</th>
+                        <th>{this.props.currentUserStats.stats[0].losses}</th>
                     </tr>
                     <tr>
                         <th>WLR</th>
-                        <th>{this.props.currentPlayerStats.stats[0].WLR}</th>
+                        <th>{this.props.currentUserStats.stats[0].WLR}</th>
                     </tr>
                     <tr>
                         <th>Ships Destroyed</th>
-                        <th>{this.props.currentPlayerStats.stats[0].shipsDestroyed}</th>
+                        <th>{this.props.currentUserStats.stats[0].shipsDestroyed}</th>
                     </tr>
                     <tr>
                         <th>Hits</th>
-                        <th>{this.props.currentPlayerStats.stats[0].hits}</th>
+                        <th>{this.props.currentUserStats.stats[0].hits}</th>
                     </tr>
                     <tr>
                         <th>Misses</th>
-                        <th>{this.props.currentPlayerStats.stats[0].misses}</th>
+                        <th>{this.props.currentUserStats.stats[0].misses}</th>
                     </tr>
                     <tr>
                         <th>HMR</th>
-                        <th>{this.props.currentPlayerStats.stats[0].HMR}</th>
+                        <th>{this.props.currentUserStats.stats[0].HMR}</th>
                     </tr>
                 </tbody>
             </table>
@@ -75,7 +75,7 @@ class YourStats extends React.Component {
 const mapStateToProps = (state) => {
     return {
         userId: state.user.userId,
-        currentPlayerStats: state.stats.currentPlayerStats
+        currentUserStats: state.stats.currentUserStats
     }
 }
 
