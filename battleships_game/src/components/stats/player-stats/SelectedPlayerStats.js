@@ -6,20 +6,30 @@ import PlayerStats from './PlayerStats';
 
 class SelectedPlayerStats extends React.Component {
     componentDidMount() {
+        this.props.fetchAllPlayerStats()
+    }
 
+    componentDidUpdate() {
+        this.getSelectedPlayerStatsIndependently()
     }
 
     /*If storeSelectedPlayerData is not triggered by onClick in GlobalStats component in
     (in cases such as refreshing page or being linked directly to url /selected-player)
     this function is called to trigger it*/
     //Note: By delegating action call to onClick load time is faster
-    //document.URL.substring(44)
     getSelectedPlayerStatsIndependently() {
         if(!this.props.player) {
-            this.props.fetchAllPlayerStats();
-            //TO DO: FIND userId in allPlayerStats using id in URL
-            
-            this.props.storeSelectedPlayerData();
+            const selectedPlayer = this.findSelectedPlayerUserId(document.URL.substring(44));
+            this.props.storeSelectedPlayerData(selectedPlayer);
+        }
+    }
+
+    //Used userId from URL to find user in allPlayerStats state
+    findSelectedPlayerUserId(playerId) {
+        for(let i = 0; i < this.props.allPlayerStats.length; i++) {
+            if(this.props.allPlayerStats[i].id === playerId) {
+                return this.props.allPlayerStats[i];
+            }
         }
     }
 
@@ -29,7 +39,7 @@ class SelectedPlayerStats extends React.Component {
                 <table className="text-center">
                 <tbody>
                     <tr>
-                        <th>Stat</th>
+                        <th>Stats</th>
                         <th>Score</th>
                     </tr>
                     <tr>
