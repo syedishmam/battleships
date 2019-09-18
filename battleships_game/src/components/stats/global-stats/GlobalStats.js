@@ -22,7 +22,6 @@ class GlobalStats extends React.Component {
     orderAllPlayersByWins() {
             let players = this.props.allPlayerStats;
             players.sort((a, b) => {return b.stats[0].wins - a.stats[0].wins;});
-            console.log(players);
             return players;
     }
 
