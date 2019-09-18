@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 
-import {fetchAllPlayerStats, storeSelectedPlayerData} from '../../../actions';
+import {fetchAllPlayerStats, storeSelectedPlayerStats} from '../../../actions';
 import './GlobalStats.css';
 
 class GlobalStats extends React.Component {
@@ -69,7 +69,7 @@ class GlobalStats extends React.Component {
                             <th>
                                 <Link 
                                     to={`/selected-player-stats/${this.state.rankings[0].id}`} 
-                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[0])}
+                                    onClick={() => this.props.storeSelectedPlayerStats(this.state.rankings[0])}
                                 >
                                 {this.state.rankings[0].userName}
                                 </Link>
@@ -80,7 +80,7 @@ class GlobalStats extends React.Component {
                             <th>
                                 <Link 
                                     to={`/selected-player-stats/${this.state.rankings[1].id}`} 
-                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[1])}
+                                    onClick={() => this.props.storeSelectedPlayerStats(this.state.rankings[1])}
                                 >
                                     {this.state.rankings[1].userName}
                                 </Link>
@@ -91,7 +91,7 @@ class GlobalStats extends React.Component {
                             <th>
                                 <Link 
                                     to={`/selected-player-stats/${this.state.rankings[2].id}`} 
-                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[2])}
+                                    onClick={() => this.props.storeSelectedPlayerStats(this.state.rankings[2])}
                                 >
                                     {this.state.rankings[2].userName}
                                 </Link>
@@ -102,7 +102,7 @@ class GlobalStats extends React.Component {
                             <th>
                                 <Link 
                                     to={`/selected-player-stats/${this.state.rankings[3].id}`} 
-                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[3])}
+                                    onClick={() => this.props.storeSelectedPlayerStats(this.state.rankings[3])}
                                 >
                                     {this.state.rankings[3].userName}
                                 </Link>
@@ -113,7 +113,7 @@ class GlobalStats extends React.Component {
                             <th>
                                 <Link 
                                     to={`/selected-player-stats/${this.state.rankings[4].id}`} 
-                                    onClick={() => this.props.storeSelectedPlayerData(this.state.rankings[4])}
+                                    onClick={() => this.props.storeSelectedPlayerStats(this.state.rankings[4])}
                                 >
                                     {this.state.rankings[4].userName}
                                 </Link>
@@ -139,4 +139,4 @@ const mapStateToProps = (state) => {
     return {allPlayerStats: state.stats.allPlayerStats}
 }
 
-export default connect(mapStateToProps, {fetchAllPlayerStats, storeSelectedPlayerData})(GlobalStats);
+export default connect(mapStateToProps, {fetchAllPlayerStats, storeSelectedPlayerStats})(GlobalStats);

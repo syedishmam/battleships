@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {storeSelectedPlayerData, fetchAllPlayerStats} from '../../../actions';
+import {storeSelectedPlayerStats, fetchAllPlayerStats} from '../../../actions';
 import PlayerStats from './PlayerStats';
 
 class SelectedPlayerStats extends React.Component {
@@ -13,14 +13,14 @@ class SelectedPlayerStats extends React.Component {
         this.getSelectedPlayerStatsIndependently()
     }
 
-    /*If storeSelectedPlayerData is not triggered by onClick in GlobalStats component in
+    /*If storeSelectedPlayerStats is not triggered by onClick in GlobalStats component in
     (in cases such as refreshing page or being linked directly to url /selected-player)
     this function is called to trigger it*/
     //Note: By delegating action call to onClick load time is faster
     getSelectedPlayerStatsIndependently() {
         if(!this.props.player) {
             const selectedPlayer = this.findSelectedPlayerUserId(document.URL.substring(44));
-            this.props.storeSelectedPlayerData(selectedPlayer);
+            this.props.storeSelectedPlayerStats(selectedPlayer);
         }
     }
 
@@ -86,7 +86,7 @@ class SelectedPlayerStats extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {player: state.selectedPlayer.data, allPlayerStats: state.stats.allPlayerStats}
+    return {player: state.stats.selectedPlayerStats, allPlayerStats: state.stats.allPlayerStats}
 }
 
-export default connect(mapStateToProps, {storeSelectedPlayerData, fetchAllPlayerStats})(SelectedPlayerStats);
+export default connect(mapStateToProps, {storeSelectedPlayerStats, fetchAllPlayerStats})(SelectedPlayerStats);

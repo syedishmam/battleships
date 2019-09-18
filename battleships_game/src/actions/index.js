@@ -54,9 +54,9 @@ export const fetchGlobalStats = () => async (dispatch) => {
   //const response = await globalStats.get(`/globalStats`);
 }
 
-export const storeSelectedPlayerData = (user) => {
+export const storeSelectedPlayerStats = (user) => {
   return {
-    type: 'STORE_SELECTED_PLAYER_DATA',
+    type: 'STORE_SELECTED_PLAYER_STATS',
     payload: user
   }
 }
